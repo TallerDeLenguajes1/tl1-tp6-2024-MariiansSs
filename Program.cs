@@ -32,21 +32,35 @@ int opcion, numero1, numero2, resultado;
 
 if(int.TryParse(texto2, out opcion))
 {
-    switch(opcion)
-    {
-        case 1:
-        Console.WriteLine("Ingrese el numero 1");
-        string num1 = Console.ReadLine();
-        Console.WriteLine("Ingrese el numero 2");
-        string num2 = Console.ReadLine();
-        if(int.TryParse(num1, out numero1) && int.TryParse(num2, out numero2))
+    Console.WriteLine("Ingrese el numero 1");
+    string num1 = Console.ReadLine();
+    Console.WriteLine("Ingrese el numero 2");
+    string num2 = Console.ReadLine();
+    if(int.TryParse(num1, out numero1) && int.TryParse(num2, out numero2))
         {
-            resultado = numero1 + numero2;
-            Console.WriteLine("El resultado de la suma es: " + resultado);
-        }
-        break;
+             switch(opcion)
+            {
+                case 1:
+                resultado = numero1 + numero2;
+                Console.WriteLine("El resultado de la suma es: " + resultado);
+                break;
 
-    }
+                case 2:
+                resultado = numero1 - numero2;
+                Console.WriteLine("El resultado de la resta es: " + resultado);
+                break;
+
+                case 3:
+                resultado = numero1 * numero2;
+                Console.WriteLine("El resultado de la multiplicacion es: " + resultado);
+                break;
+
+                case 4:
+                resultado = numero1/numero2;
+                Console.WriteLine("El resultado de la division es: " + resultado);
+                break;
+            }
+        }
 }
 
 
