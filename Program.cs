@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-
+// Punto 1 //
 int a;
 int invertir = 0;
 
@@ -20,6 +20,8 @@ if(int.TryParse(texto, out a))
    }
 }
  Console.WriteLine(invertir);
+
+// Punto 2 //
 
 
 
