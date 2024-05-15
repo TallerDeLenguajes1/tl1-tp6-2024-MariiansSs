@@ -39,7 +39,6 @@ do{
                 break;
             }
         }
-
     }
     Console.Write("Desea realizar otra operacion? (0=no, 1=si)");
     string banderaO = Console.ReadLine();
