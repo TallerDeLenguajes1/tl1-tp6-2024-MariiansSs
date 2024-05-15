@@ -1,12 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
+
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
 // Punto 1 //
 int a;
 int invertir = 0;
 
 
 Console.WriteLine("Ingrese un numero");
-string texto = Console.ReadLine();
+string texto = Console.ReadLine(); 
 
 if(int.TryParse(texto, out a))
 {
@@ -22,7 +25,5 @@ if(int.TryParse(texto, out a))
  Console.WriteLine(invertir);
 
 // Punto 2 //
-
-
 
 
