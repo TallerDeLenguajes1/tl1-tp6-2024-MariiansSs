@@ -39,6 +39,24 @@ Console.WriteLine("La longitud de la cadena es:"+ cadena.Length);
 
 //Console.Write($"Lo ingresado fue: {cadena} {cadena2}");
 
-Console.Write(cadena.Substring(0,2));
+//Console.Write(cadena.Substring(0,2));
+
+foreach (var caracteres in cadena)
+{
+    Console.Write($"{caracteres}\n"); 
+}
+
+int ocurrencia = cadena.IndexOf('s');
+Console.Write(ocurrencia);
+
+/*
+for (int i = 0; i < cadena.Length; i++)
+{
+    if(System.Char.IsLower(cadena[i]) == true)
+    {
+        cadena[i] = System.Char.ToUpper(cadena[i]); // ???
+    }
+}
+*/
 
 
