@@ -24,6 +24,6 @@ if(int.TryParse(texto, out a))
 }
  Console.WriteLine(invertir);
 
-// Punto 2 //
+
 
 
