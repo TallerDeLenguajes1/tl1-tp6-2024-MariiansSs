@@ -2,40 +2,49 @@
 //Console.WriteLine("Hello, World!");
 // Punto 2 //
 
-int bandera = 1,opcion, numero1, numero2, resultado;
+int bandera = 1,opcion; 
+double numero1 , resultado;
 
 do{
-    Console.Write("1:Sumar dos numeros");
-    Console.Write("2:Restar dos numeros");
-    Console.Write("3:Multiplicar dos numeros");
-    Console.Write("4:Dividir dos numeros");
+    Console.Write("1:Mostrar Valor Absoluto de un numero\n");
+    Console.Write("2:Mostrar el cuadrado de un numero\n");
+    Console.Write("3:Mostrar la raiz cuadrada de un numero\n");
+    Console.Write("4:Mostrar el seno de un numero\n");
+    Console.Write("5:Mostrar el coseno de un numero\n");
+    Console.Write("6:Mostrar la parte entera de un numero tipo float\n");
     string opcionS = Console.ReadLine();
     if(int.TryParse(opcionS, out opcion))
     {
-        Console.Write("Ingrese el numero 1");
+        Console.Write("Ingrese un numero");
         string num1 = Console.ReadLine();        
-        Console.Write("Ingrese el numero 2");
-        string num2 = Console.ReadLine();
 
-        if(int.TryParse(num1, out numero1) && int.TryParse(num2, out numero2))
+        if(double.TryParse(num1, out numero1))
         {
             switch(opcion)
             {
                 case 1:
-                    resultado = numero1 + numero2;
-                    Console.WriteLine("El resultado de la suma es: " + resultado);
+                    resultado = Math.Abs(numero1);
+                    Console.WriteLine("El valor absoluto del numero es: " + resultado);
                 break;
                 case 2:
-                    resultado = numero1 - numero2;
-                    Console.WriteLine("El resultado de la resta es: " + resultado);
+                    resultado = Math.Pow(numero1,2);
+                    Console.WriteLine("El cuadrado del numero es: " + resultado);
                 break;
                 case 3:
-                    resultado = numero1 * numero2;
-                    Console.WriteLine("El resultado de la multiplicacion es: " + resultado);
+                    resultado = Math.Sqrt(numero1);
+                    Console.WriteLine("La raiz cuadrada del numero es: " + resultado);
                 break;
                 case 4:
-                    resultado = numero1/numero2;
-                    Console.WriteLine("El resultado de la division es: " + resultado);
+                    resultado = Math.Sin(numero1);
+                    Console.WriteLine("El seno del numero es: " + resultado);
+                break;
+                case 5:
+                    resultado = Math.Cos(numero1);
+                    Console.WriteLine("El coseno del numero es: " + resultado);
+                break;
+                case 6:
+                    resultado = Math.Floor(numero1);
+                    Console.WriteLine("La parte entera del numero es: " + resultado);
                 break;
             }
         }
